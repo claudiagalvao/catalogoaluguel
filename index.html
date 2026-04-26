@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Fantasy - Catálogo de Aluguel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/logo-crazy-fantasy.png" alt="Logo Crazy Fantasy">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">INÍCIO</a></li>
+                <li><a href="#">FANTASIAS</a></li>
+                <li><a href="#">ACESSÓRIOS</a></li>
+                <li><a href="#">COMBOS</a></li>
+                <li><a href="#">SOBRE NÓS</a></li>
+                <li><a href="#">CONTATO</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <i class="far fa-heart"></i>
+            <div class="cart-count">2</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-banner" style="background-image: url('assets/hero-background.jpg');">
+            <div class="hero-text">
+                <h1>QUAL VAI SER SUA <span>VIBE</span> HOJE?</h1>
+                <p>Escolha uma vibe ou explore tudo 🔥</p>
+            </div>
+
+            <div class="vibe-container">
+                <div class="vibe-card pink">
+                    <i class="fas fa-skull"></i>
+                    <div class="vibe-info"><strong>IMPACTAR</strong><span>chegue chegando</span></div>
+                </div>
+                <div class="vibe-card yellow">
+                    <i class="fas fa-smile"></i>
+                    <div class="vibe-info"><strong>DIVERTIR</strong><span>alegria garantida</span></div>
+                </div>
+                <div class="vibe-card blue">
+                    <i class="fas fa-bolt"></i>
+                    <div class="vibe-info"><strong>BRILHAR</strong><span>seja o centro</span></div>
+                </div>
+                <div class="vibe-card gold">
+                    <i class="fas fa-crown"></i>
+                    <div class="vibe-info"><strong>LUXO</strong><span>sofisticação pura</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-bar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Ex: arlequina, policial, anos 80...">
+            </div>
+            <div class="select-group">
+                <select><option>TAMANHO</option></select>
+                <select><option>GÊNERO</option></select>
+                <select><option>PREÇO</option></select>
+                <select><option>ESTILO</option></select>
+                <button class="btn-clear">LIMPAR FILTROS <i class="fas fa-times-circle"></i></button>
+            </div>
+        </section>
+
+        <section class="product-grid">
+            <div class="grid-header">
+                <h2>🔥 AS MAIS PEDIDAS</h2>
+                <a href="#">VER TUDO <i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/fantasia-mulher-gato.jpg" alt="Mulher Gato">
+                        <i class="far fa-heart heart-icon"></i>
+                    </div>
+                    <div class="card-desc">
+                        <h3>MULHER GATO</h3>
+                        <span class="price">R$ 129,90</span>
+                        <span class="subtext">3x de R$ 43,30</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/fantasia-arlequina.jpg" alt="Arlequina">
+                        <i class="far fa-heart heart-icon"></i>
+                    </div>
+                    <div class="card-desc">
+                        <h3>ARLEQUINA</h3>
+                        <span class="price">R$ 129,90</span>
+                        <span class="subtext">3x de R$ 43,30</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="img-box">
+                        <img src="assets/fantasia-coringa.jpg" alt="Coringa">
+                        <i class="far fa-heart heart-icon"></i>
+                    </div>
+                    <div class="card-desc">
+                        <h3>CORINGA</h3>
+                        <span class="price">R$ 129,90</span>
+                        <span class="subtext">3x de R$ 43,30</span>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+
+        <section class="category-banners">
+            <div class="cat-banner" style="background-image: url('assets/banner-casal.jpg');">
+                <div class="cat-content">
+                    <h4>FANTASIAS <strong>PARA CASAL</strong></h4>
+                    <p>Combinações que fazem sucesso em dobro</p>
+                    <button>VER OPÇÕES <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="cat-banner" style="background-image: url('assets/banner-grupos.jpg');">
+                <div class="cat-content">
+                    <h4>FANTASIAS PARA <strong>GRUPOS & TURMAS</strong></h4>
+                    <p>Perfeitas para chegar causando juntos</p>
+                    <button>VER OPÇÕES <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="benefit-item">
+            <i class="fas fa-truck"></i>
+            <div><strong>ENTREGA RÁPIDA</strong><span>para todo o Brasil</span></div>
+        </div>
+        <div class="benefit-item">
+            <i class="fas fa-shield-alt"></i>
+            <div><strong>PAGAMENTO SEGURO</strong><span>compra 100% protegida</span></div>
+        </div>
+        <div class="help-cta">
+            <span>NÃO SABE O QUE ESCOLHER? A gente te ajuda!</span>
+            <button>ME AJUDA A DECIDIR 😍</button>
+        </div>
+    </footer>
+
+</body>
+</html>

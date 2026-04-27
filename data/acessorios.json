@@ -1,13 +1,20 @@
 [
-  { "id": 101, "nome": "Peruca Colorida", "preco": 45.00, "imagem": "peruca.webp" },
-  { "id": 102, "nome": "Bastão de Beisebol", "preco": 30.00, "imagem": "bastao.webp" },
-  { "id": 103, "nome": "Meia Calça Arrastão", "preco": 20.00, "imagem": "meia.webp" }
-]
-[
   {
     "id": "choker-caveira",
     "nome": "Choker Caveira",
     "preco": 29.90,
-    "imagem": "assets/images/acessorios/choker.jpg"
+    "imagem": "assets/images/acessorios/choker-caveira.jpg"
+  },
+  {
+    "id": "tiara-chifres",
+    "nome": "Tiara com Chifres",
+    "preco": 24.90,
+    "imagem": "assets/images/acessorios/tiara-chifres.jpg"
+  },
+  {
+    "id": "luvas-couro",
+    "nome": "Luvas de Couro",
+    "preco": 35.90,
+    "imagem": "assets/images/acessorios/luvas-couro.jpg"
   }
 ]

@@ -1,173 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Fantasy | Qual vai ser sua vibe hoje?</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Crazy Fantasy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Crazy Fantasy" onerror="this.style.display='none'">
-            <h2 onclick="limparFiltros()">CRAZY<span>FANTASY</span></h2>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">INÍCIO</a></li>
-                <li><a href="#" onclick="filtrarTag('fantasias')">FANTASIAS</a></li>
-                <li><a href="#" onclick="filtrarTag('acessorios')">ACESSÓRIOS</a></li>
-                <li><a href="#" onclick="filtrarTag('combo')">COMBOS</a></li>
-                <li><a href="#">SOBRE NÓS</a></li>
-                <li><a href="#">CONTATO</a></li>
-            </ul>
-        </nav>
-        <div class="header-icons">
-            <i class="fas fa-search"></i>
-            <i class="far fa-heart"></i>
-            <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span>2</span>
-            </div>
-        </div>
-    </header>
+<header class="header">
+  <h1>CRAZY <span>FANTASY</span></h1>
+</header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>QUAL VAI SER SUA <span>VIBE</span> HOJE?</h1>
-                <p>Escolha uma vibe ou explore tudo 🔥</p>
-                
-                <div class="vibe-container">
-                    <button class="vibe-btn impactar" onclick="filtrarEstilo('Impactar')">
-                        <i class="fas fa-skull"></i>
-                        <div><strong>IMPACTAR</strong><br><span>chegue chegando</span></div>
-                    </button>
-                    <button class="vibe-btn divertir" onclick="filtrarEstilo('Divertir')">
-                        <i class="fas fa-smile"></i>
-                        <div><strong>DIVERTIR</strong><br><span>alegria garantida</span></div>
-                    </button>
-                    <button class="vibe-btn brilhar" onclick="filtrarEstilo('Brilhar')">
-                        <i class="fas fa-bolt"></i>
-                        <div><strong>BRILHAR</strong><br><span>seja o centro</span></div>
-                    </button>
-                    <button class="vibe-btn luxo" onclick="filtrarEstilo('Luxo')">
-                        <i class="fas fa-crown"></i>
-                        <div><strong>LUXO</strong><br><span>sofisticação pura</span></div>
-                    </button>
-                </div>
-            </div>
-        </section>
+<section class="hero">
+  <input id="search" placeholder="Buscar fantasia...">
 
-        <section class="filter-bar">
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="search" placeholder="Ex: arlequina, policial, anos 80...">
-            </div>
-            
-            <div class="select-group">
-                <select id="f-tamanho"><option value="">TAMANHO</option><option value="P">P</option><option value="M">M</option><option value="G">G</option></select>
-                <select id="f-genero"><option value="">GÊNERO</option><option value="Feminino">Feminino</option><option value="Masculino">Masculino</option></select>
-                <select id="f-preco"><option value="">PREÇO</option></select>
-                <select id="f-estilo"><option value="">ESTILO</option></select>
-            </div>
-            
-            <button class="btn-clear" onclick="limparFiltros()">LIMPAR FILTROS <i class="far fa-times-circle"></i></button>
-        </section>
+  <div class="filters">
+    <select id="tamanho"><option value="">Tamanho</option><option>P</option><option>M</option><option>G</option></select>
+    <select id="genero"><option value="">Gênero</option><option>Feminino</option><option>Masculino</option></select>
+    <select id="preco"><option value="">Preço</option><option value="100">Até 100</option><option value="150">Até 150</option></select>
+    <select id="estilo"><option value="">Estilo</option><option value="casal">Casal</option><option value="grupo">Grupo</option><option value="festa">Festa</option></select>
+    <button id="clear">Limpar</button>
+  </div>
+</section>
 
-        <section class="shelf">
-            <div class="shelf-header">
-                <h2>🔥 AS MAIS PEDIDAS</h2>
-                <a href="#" class="view-all">VER TUDO <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="carousel-wrapper">
-                <button class="arrow-btn left" onclick="sideScroll(-1)"><i class="fas fa-chevron-left"></i></button>
-                <div id="vitrine" class="product-list">
-                    </div>
-                <button class="arrow-btn right" onclick="sideScroll(1)"><i class="fas fa-chevron-right"></i></button>
-            </div>
-        </section>
+<section>
+  <h3>🔥 As mais pedidas</h3>
+  <div class="carousel">
+    <button id="prev">←</button>
+    <div id="track"></div>
+    <button id="next">→</button>
+  </div>
+</section>
 
-        <section class="categories-grid">
-            <div class="cat-card casal" onclick="filtrarTag('casal')">
-                <div class="cat-info">
-                    <p>FANTASIAS</p>
-                    <h3>❤️ PARA CASAL</h3>
-                    <span>Combinações que fazem sucesso em dobro</span>
-                    <button class="btn-cat">VER OPÇÕES <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-            <div class="cat-card grupo" onclick="filtrarTag('grupo')">
-                <div class="cat-info">
-                    <p>FANTASIAS PARA</p>
-                    <h3>👥 GRUPOS & TURMAS</h3>
-                    <span>Perfeitas para chegar causando juntos</span>
-                    <button class="btn-cat orange">VER OPÇÕES <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-            <div class="cat-card balada" onclick="filtrarTag('balada')">
-                <div class="cat-info">
-                    <p>FANTASIAS PARA</p>
-                    <h3>⚡ FESTAS & BALADAS</h3>
-                    <span>Looks que brilham na noite</span>
-                    <button class="btn-cat blue">VER OPÇÕES <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-            <div class="cat-card alugadas" onclick="filtrarTag('mais-alugadas')">
-                <div class="cat-info">
-                    <p>TENDÊNCIAS</p>
-                    <h3>🔥 MAIS ALUGADAS</h3>
-                    <span>As fantasias que estão voando da loja</span>
-                    <button class="btn-cat yellow">VER OPÇÕES <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </section>
+<section id="grid"></section>
 
-        <section class="help-section">
-            <div class="help-container">
-                <div class="benefit-item"><i class="fas fa-truck"></i> <div><strong>ENTREGA RÁPIDA</strong><br><span>para todo o Brasil</span></div></div>
-                <div class="benefit-item"><i class="fas fa-shield-alt"></i> <div><strong>PAGAMENTO SEGURO</strong><br><span>compra 100% protegida</span></div></div>
-                <div class="benefit-item"><i class="fab fa-whatsapp"></i> <div><strong>ATENDIMENTO HUMANIZADO</strong><br><span>via WhatsApp</span></div></div>
-                <div class="benefit-item"><i class="fas fa-star"></i> <div><strong>QUALIDADE PREMIUM</strong><br><span>fantasias incríveis</span></div></div>
-                
-                <div class="decision-helper">
-                    <p>NÃO SABE O QUE ESCOLHER?<br><span>A gente te ajuda!</span></p>
-                    <button class="btn-decision">ME AJUDA A DECIDIR 😉</button>
-                </div>
-            </div>
-        </section>
-    </main>
+<section class="banners">
+  <button onclick="filtrarCategoria('casal')">💑 Casal</button>
+  <button onclick="filtrarCategoria('grupo')">👯 Grupo</button>
+  <button onclick="filtrarCategoria('festa')">🎉 Festa</button>
+  <button onclick="filtrarCategoria('trending')">🔥 Mais alugadas</button>
+</section>
 
-    <div id="modal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-modal" onclick="fecharModal()">&times;</span>
-            <div class="modal-header">
-                <h2>COMPLETE SEU LOOK E GANHE DESCONTO! 👑</h2>
-                <p>Adicione acessórios e economize no aluguel:</p>
-                <div class="discount-rules">
-                    <span>1 item: <strong>5%</strong></span>
-                    <span>2 itens: <strong>8%</strong></span>
-                    <span>3+ itens: <strong class="highlight">10% OFF</strong></span>
-                </div>
-            </div>
+<footer>
+  <p>🚚 Entrega rápida | 🔒 Seguro | 💬 WhatsApp | ⭐ Premium</p>
+</footer>
 
-            <div id="upsell-items" class="upsell-grid">
-                </div>
+<div id="modal" class="modal hidden"></div>
 
-            <div class="modal-footer">
-                <div class="resumo-financeiro">
-                    <p>Desconto no Aluguel: <span id="label-desconto">0%</span></p>
-                </div>
-                <button class="btn-final-whats" onclick="enviarWhats()">
-                    RESERVAR LOOK COMPLETO NO WHATSAPP <i class="fab fa-whatsapp"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

@@ -1,82 +1,248 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crazy Fantasy | Aluguel de Fantasias Premium</title>
+    <meta name="description" content="Crazy Fantasy - Aluguel de fantasias premium. Monte seu look e cause impacto!">
+    <title>Crazy Fantasy • Aluguel de Fantasias</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
 </head>
-<body class="dark-theme">
-    <header>
-        <nav class="container">
-            <img src="assets/images/logo.png" alt="Crazy Fantasy" class="logo">
-        </nav>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="crown">👑</span>
+                <h1>CRAZY <span class="fantasy">FANTASY</span></h1>
+                <p class="tagline">MONTE SEU LOOK. CAUSE IMPACTO.</p>
+            </div>
+        </div>
     </header>
 
-    <section class="hero" style="background-image: url('assets/images/hero-bg.jpg');">
-        <div class="container hero-content">
-            <h1>QUAL VAI SER SUA <span class="neon-pink">VIBE</span> HOJE?</h1>
-            <p>Escolha uma vibe ou explore tudo 😍</p>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>QUAL VAI SER<br>SUA <span class="neon-pink">VIBE</span> HOJE?</h2>
+                <p class="subtitle">Escolha uma vibe ou explore tudo 🔥</p>
+                
+                <!-- VIBES -->
+                <div class="vibes-grid" id="vibes-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
             
-            <div class="vibe-selector">
-                <button class="vibe-btn" data-vibe="impactar">
-                    <span class="icon">💀</span> IMPACTAR <span>chegue chegando</span>
-                </button>
-                <button class="vibe-btn" data-vibe="divertir">
-                    <span class="icon">😊</span> DIVERTIR <span>alegria garantida</span>
-                </button>
-                <button class="vibe-btn" data-vibe="brilhar">
-                    <span class="icon">⚡</span> BRILHAR <span>seja o centro</span>
-                </button>
-                <button class="vibe-btn" data-vibe="luxo">
-                    <span class="icon">👑</span> LUXO <span>sofisticação pura</span>
-                </button>
+            <!-- HERO CHARACTERS (visual only) -->
+            <div class="hero-visual">
+                <div class="character-grid">
+                    <!-- Background characters are in CSS background -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- SEARCH + FILTERS -->
+    <div class="filters-bar">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Ex: arlequina, policial, anos 80..." autocomplete="off">
+                <button class="btn-search">🔍</button>
+            </div>
+            
+            <div class="filters">
+                <select id="filter-tamanho" class="filter-select">
+                    <option value="">TAMANHO</option>
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                    <option value="Unisex">Unisex</option>
+                </select>
+                
+                <select id="filter-genero" class="filter-select">
+                    <option value="">GÊNERO</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="unisex">Unisex</option>
+                    <option value="casal">Casal</option>
+                </select>
+                
+                <select id="filter-preco" class="filter-select">
+                    <option value="">PREÇO</option>
+                    <option value="0-100">Até R$ 100</option>
+                    <option value="100-130">R$ 100 - 130</option>
+                    <option value="130-200">Acima de R$ 130</option>
+                </select>
+                
+                <select id="filter-estilo" class="filter-select">
+                    <option value="">ESTILO</option>
+                    <option value="impactar">Impactar</option>
+                    <option value="divertido">Divertir</option>
+                    <option value="brilhar">Brilhar</option>
+                    <option value="luxo">Luxo</option>
+                    <option value="sexy">Sexy</option>
+                </select>
+                
+                <button id="btn-limpar-filtros" class="btn-clear">LIMPAR FILTROS</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AS MAIS PEDIDAS -->
+    <section class="section" id="mais-pedidas">
+        <div class="container">
+            <div class="section-header">
+                <div class="fire-icon">🔥</div>
+                <h2>AS MAIS PEDIDAS</h2>
+                <a href="#" onclick="verTudo()" class="ver-tudo">VER TUDO →</a>
+            </div>
+            
+            <div class="carousel" id="carousel-mais-pedidas">
+                <button class="carousel-btn prev" id="prev-btn">‹</button>
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Cards populated by JS -->
+                </div>
+                <button class="carousel-btn next" id="next-btn">›</button>
             </div>
         </div>
     </section>
 
-    <main class="container">
-        <section class="filters-bar">
-            <div class="search-wrapper">
-                <input type="text" id="searchInput" placeholder="Ex: arlequina, policial, anos 80...">
-            </div>
-            <div class="select-group">
-                <select id="filterTamanho"><option value="">TAMANHO</option></select>
-                <select id="filterGenero"><option value="">GÊNERO</option></select>
-                <select id="filterPreco"><option value="">PREÇO</option></select>
-                <button id="clearFilters">LIMPAR FILTROS ✕</button>
-            </div>
-        </section>
-
-        <section class="shelf">
-            <div class="shelf-header">
-                <h2>🔥 AS MAIS PEDIDAS</h2>
-                <button class="btn-ver-tudo">VER TUDO ➔</button>
-            </div>
-            <div class="carousel" id="destaquesContainer">
+    <!-- SEÇÃO DE CATEGORIAS / BANNERS -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="categories-grid">
+                <!-- Casal -->
+                <div class="category-card" data-categoria="casal" onclick="filtrarPorCategoria('casal')">
+                    <div class="category-image" style="background-image: url('assets/images/banner-casal.webp')"></div>
+                    <div class="category-content">
+                        <span class="heart">❤️</span>
+                        <h3>FANTASIAS PARA CASAL</h3>
+                        <p>Combinações que fazem sucesso em dobro</p>
+                        <button class="btn-ver-opcoes pink">VER OPÇÕES →</button>
+                    </div>
                 </div>
-        </section>
-
-        <section class="categories-grid">
-            <div class="cat-card casal" style="background-image: url('assets/images/cat-casal.jpg');" data-cat="casal">
-                <span>PARA CASAL</span>
-                <button class="btn-cat">VER OPÇÕES ➔</button>
+                
+                <!-- Grupos -->
+                <div class="category-card" data-categoria="grupo" onclick="filtrarPorCategoria('grupo')">
+                    <div class="category-image" style="background-image: url('assets/images/banner-grupo.webp')"></div>
+                    <div class="category-content">
+                        <span class="group-icon">👥</span>
+                        <h3>FANTASIAS PARA GRUPOS &amp; TURMAS</h3>
+                        <p>Perfeitas para chegar causando juntos</p>
+                        <button class="btn-ver-opcoes yellow">VER OPÇÕES →</button>
+                    </div>
+                </div>
+                
+                <!-- Festas & Baladas -->
+                <div class="category-card" data-categoria="festa" onclick="filtrarPorCategoria('festa')">
+                    <div class="category-image" style="background-image: url('assets/images/banner-balada.webp')"></div>
+                    <div class="category-content">
+                        <span class="lightning">⚡</span>
+                        <h3>FANTASIAS PARA FESTAS &amp; BALADAS</h3>
+                        <p>Looks que brilham na noite</p>
+                        <button class="btn-ver-opcoes cyan">VER OPÇÕES →</button>
+                    </div>
+                </div>
+                
+                <!-- Tendências -->
+                <div class="category-card" data-categoria="trending" onclick="filtrarPorCategoria('trending')">
+                    <div class="category-image" style="background-image: url('assets/images/banner-trending.webp')"></div>
+                    <div class="category-content">
+                        <span class="fire">🔥</span>
+                        <h3>TENDÊNCIAS MAIS ALUGADAS</h3>
+                        <p>As fantasias que estão voando da loja</p>
+                        <button class="btn-ver-opcoes orange">VER OPÇÕES →</button>
+                    </div>
+                </div>
             </div>
-            <div class="cat-card grupo" style="background-image: url('assets/images/cat-grupo.jpg');" data-cat="grupo">
-                <span>GRUPOS & TURMAS</span>
-                <button class="btn-cat">VER OPÇÕES ➔</button>
-            </div>
-            </section>
-    </main>
+        </div>
+    </section>
 
-    <div id="productModal" class="modal">
+    <!-- MODAL -->
+    <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
+            <button class="modal-close" onclick="fecharModal()">✕</button>
+            
             <div class="modal-body">
+                <div class="modal-image" id="modal-image">
+                    <!-- JS injected -->
                 </div>
+                
+                <div class="modal-info">
+                    <h2 id="modal-nome"></h2>
+                    <p id="modal-descricao" class="modal-desc"></p>
+                    
+                    <div class="modal-preco">
+                        <span id="modal-preco"></span>
+                    </div>
+                    
+                    <div class="modal-tamanhos">
+                        <h4>Tamanhos disponíveis</h4>
+                        <div id="modal-tamanhos-list" class="tamanhos-grid"></div>
+                    </div>
+                    
+                    <!-- UPSELL -->
+                    <div class="upsell-section" id="upsell-section">
+                        <h3>🔥 Complete seu look</h3>
+                        <div id="upsell-list" class="upsell-grid">
+                            <!-- JS populated -->
+                        </div>
+                        
+                        <div class="discount-summary" id="discount-summary">
+                            <p id="discount-text" class="discount-text"></p>
+                            <div class="total-final">
+                                <span>Total com desconto:</span>
+                                <strong id="total-final"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="enviarWhatsApp()" class="btn-whatsapp">
+                        QUERO ESSE LOOK <span class="whatsapp-icon">📱</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-item">
+                    <div class="icon">🚚</div>
+                    <strong>ENTREGA RÁPIDA</strong>
+                    <p>para todo o Brasil</p>
+                </div>
+                <div class="footer-item">
+                    <div class="icon">🔒</div>
+                    <strong>PAGAMENTO SEGURO</strong>
+                    <p>compra 100% protegida</p>
+                </div>
+                <div class="footer-item">
+                    <div class="icon">💬</div>
+                    <strong>ATENDIMENTO HUMANIZADO</strong>
+                    <p>via WhatsApp</p>
+                </div>
+                <div class="footer-item">
+                    <div class="icon">⭐</div>
+                    <strong>QUALIDADE PREMIUM</strong>
+                    <p>fantasias incríveis</p>
+                </div>
+            </div>
+            
+            <div class="help-box">
+                <p><strong>NÃO SABE O QUE ESCOLHER?</strong></p>
+                <p>A gente te ajuda! 😊</p>
+                <button onclick="ajudarDecidir()" class="btn-ajuda">ME AJUDA A DECIDIR</button>
+            </div>
+            
+            <p class="copyright">© 2026 Crazy Fantasy • Todos os direitos reservados • Valinhos, SP</p>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

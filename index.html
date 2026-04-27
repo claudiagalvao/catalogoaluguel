@@ -10,9 +10,7 @@
 <body>
     <!-- HEADER -->
     <header>
-        <div class="logo">
-            👑 <span>CRAZY</span><span class="pink">FANTASY</span>
-        </div>
+        <div class="logo">👑 <span>CRAZY</span><span class="pink">FANTASY</span></div>
         <p class="tagline">MONTE SEU LOOK. CAUSE IMPACTO.</p>
     </header>
 
@@ -35,36 +33,56 @@
             <select id="filter-tamanho"><option value="">TAMANHO</option><option>P</option><option>M</option><option>G</option></select>
             <select id="filter-genero"><option value="">GÊNERO</option><option>Feminino</option><option>Masculino</option></select>
             <select id="filter-preco"><option value="">PREÇO</option><option value="100">Até R$100</option><option value="150">Até R$150</option></select>
-            <select id="filter-estilo"><option value="">ESTILO</option></select>
             <button id="btn-limpar" class="btn-limpar">LIMPAR FILTROS</button>
         </div>
     </div>
 
     <!-- AS MAIS PEDIDAS -->
     <section class="section">
-        <div class="section-header">
-            🔥 <h2>AS MAIS PEDIDAS</h2>
-        </div>
+        <div class="section-header">🔥 <h2>AS MAIS PEDIDAS</h2></div>
         <div class="carousel">
             <div class="carousel-track" id="carousel-track"></div>
         </div>
     </section>
 
-    <!-- MODAL (para quando clicar no card) -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="fecharModal()">✕</span>
-            <div class="modal-body">
-                <div id="modal-image"></div>
-                <div class="modal-info">
-                    <h2 id="modal-nome"></h2>
-                    <p id="modal-descricao"></p>
-                    <p id="modal-preco" class="price"></p>
-                    <button onclick="enviarWhatsApp()" class="btn-whatsapp">QUERO ESSE LOOK</button>
-                </div>
+    <!-- BANNERS DE CATEGORIAS -->
+    <section class="categories">
+        <div class="category-banner" onclick="filtrarCategoria('casal')">
+            <img src="assets/images/banner-casal.webp" alt="Para Casal">
+            <div class="banner-overlay">
+                <h3>FANTASIAS PARA CASAL ❤️</h3>
+                <p>Combinações que fazem sucesso em dobro</p>
+                <button class="btn-pink">VER OPÇÕES →</button>
             </div>
         </div>
-    </div>
+
+        <div class="category-banner" onclick="filtrarCategoria('grupo')">
+            <img src="assets/images/banner-grupo.webp" alt="Grupos">
+            <div class="banner-overlay">
+                <h3>FANTASIAS PARA GRUPOS & TURMAS</h3>
+                <p>Perfeitas para chegar causando juntos</p>
+                <button class="btn-yellow">VER OPÇÕES →</button>
+            </div>
+        </div>
+
+        <div class="category-banner" onclick="filtrarCategoria('balada')">
+            <img src="assets/images/banner-balada.webp" alt="Balada">
+            <div class="banner-overlay">
+                <h3>FANTASIAS PARA FESTAS & BALADAS</h3>
+                <p>Looks que brilham na noite</p>
+                <button class="btn-cyan">VER OPÇÕES →</button>
+            </div>
+        </div>
+
+        <div class="category-banner" onclick="filtrarCategoria('trending')">
+            <img src="assets/images/banner-trending.webp" alt="Tendências">
+            <div class="banner-overlay">
+                <h3>TENDÊNCIAS MAIS ALUGADAS 🔥</h3>
+                <p>As fantasias que estão voando da loja</p>
+                <button class="btn-orange">VER OPÇÕES →</button>
+            </div>
+        </div>
+    </section>
 
     <script src="js/script.js"></script>
 </body>

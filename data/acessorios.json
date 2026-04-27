@@ -3,3 +3,11 @@
   { "id": 102, "nome": "Bastão de Beisebol", "preco": 30.00, "imagem": "bastao.webp" },
   { "id": 103, "nome": "Meia Calça Arrastão", "preco": 20.00, "imagem": "meia.webp" }
 ]
+[
+  {
+    "id": "choker-caveira",
+    "nome": "Choker Caveira",
+    "preco": 29.90,
+    "imagem": "assets/images/acessorios/choker.jpg"
+  }
+]

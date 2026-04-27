@@ -1,20 +1,5 @@
 [
-  {
-    "id":1,
-    "nome":"Taco",
-    "preco":39.9,
-    "imagem":"assets/img/acessorios/taco.jpg"
-  },
-  {
-    "id":2,
-    "nome":"Peruca",
-    "preco":59.9,
-    "imagem":"assets/img/acessorios/peruca.jpg"
-  },
-  {
-    "id":3,
-    "nome":"Algema",
-    "preco":29.9,
-    "imagem":"assets/img/acessorios/algema.jpg"
-  }
+  { "id": 101, "nome": "Peruca Colorida", "preco": 45.00, "imagem": "peruca.webp" },
+  { "id": 102, "nome": "Bastão de Beisebol", "preco": 30.00, "imagem": "bastao.webp" },
+  { "id": 103, "nome": "Meia Calça Arrastão", "preco": 20.00, "imagem": "meia.webp" }
 ]

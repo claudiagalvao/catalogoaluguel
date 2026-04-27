@@ -21,7 +21,6 @@
         <div class="hero-content">
             <h1>QUAL VAI SER<br><span class="vibe-title">SUA VIBE HOJE?</span></h1>
             <p class="subtitle">Escolha uma vibe ou explore tudo 🔥</p>
-            
             <div class="vibes-grid" id="vibes-grid"></div>
         </div>
     </section>
@@ -44,20 +43,26 @@
     <!-- AS MAIS PEDIDAS -->
     <section class="section">
         <div class="section-header">
-            <span class="fire">🔥</span>
-            <h2>AS MAIS PEDIDAS</h2>
+            🔥 <h2>AS MAIS PEDIDAS</h2>
         </div>
-        <div class="carousel" id="carousel-mais-pedidas">
+        <div class="carousel">
             <div class="carousel-track" id="carousel-track"></div>
         </div>
     </section>
 
-    <!-- BANNER CASAL -->
-    <div class="category-banner" onclick="alert('Em breve: Fantasias para Casal')">
-        <img src="assets/images/banner-casal.webp" alt="Casal">
-        <div class="overlay-text">
-            <h3>FANTASIAS PARA CASAL ❤️</h3>
-            <button class="btn-pink">VER OPÇÕES →</button>
+    <!-- MODAL (para quando clicar no card) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">✕</span>
+            <div class="modal-body">
+                <div id="modal-image"></div>
+                <div class="modal-info">
+                    <h2 id="modal-nome"></h2>
+                    <p id="modal-descricao"></p>
+                    <p id="modal-preco" class="price"></p>
+                    <button onclick="enviarWhatsApp()" class="btn-whatsapp">QUERO ESSE LOOK</button>
+                </div>
+            </div>
         </div>
     </div>
 

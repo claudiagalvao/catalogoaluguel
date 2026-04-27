@@ -11,59 +11,55 @@
     <!-- HEADER -->
     <header>
         <div class="logo">
-            👑 <span>CRAZY</span> <span class="pink">FANTASY</span>
+            👑 <span>CRAZY</span><span class="pink">FANTASY</span>
         </div>
         <p class="tagline">MONTE SEU LOOK. CAUSE IMPACTO.</p>
     </header>
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>QUAL VAI SER<br><span class="vibe-title">SUA VIBE HOJE?</span></h1>
             <p class="subtitle">Escolha uma vibe ou explore tudo 🔥</p>
             
-            <div class="vibes" id="vibes">
-                <!-- JS -->
-            </div>
+            <div class="vibes-grid" id="vibes-grid"></div>
         </div>
     </section>
 
     <!-- FILTROS -->
-    <div class="filters-container">
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Ex: arlequina, policial, anos 80...">
-            <button>🔍</button>
+    <div class="filters-bar">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Ex: arlequina, policial, anos 80...">
+            <button class="btn-search">🔍</button>
         </div>
-        
         <div class="filters">
-            <select id="tamanho"><option value="">TAMANHO</option><option>P</option><option>M</option><option>G</option></select>
-            <select id="genero"><option value="">GÊNERO</option><option>Feminino</option><option>Masculino</option></select>
-            <select id="preco"><option value="">PREÇO</option><option value="100">Até R$100</option><option value="150">Até R$150</option></select>
-            <select id="estilo"><option value="">ESTILO</option></select>
-            <button id="limpar" class="btn-limpar">LIMPAR FILTROS</button>
+            <select id="filter-tamanho"><option value="">TAMANHO</option><option>P</option><option>M</option><option>G</option></select>
+            <select id="filter-genero"><option value="">GÊNERO</option><option>Feminino</option><option>Masculino</option></select>
+            <select id="filter-preco"><option value="">PREÇO</option><option value="100">Até R$100</option><option value="150">Até R$150</option></select>
+            <select id="filter-estilo"><option value="">ESTILO</option></select>
+            <button id="btn-limpar" class="btn-limpar">LIMPAR FILTROS</button>
         </div>
     </div>
 
-    <!-- MAIS PEDIDAS -->
+    <!-- AS MAIS PEDIDAS -->
     <section class="section">
-        <h2 class="section-title">🔥 AS MAIS PEDIDAS</h2>
-        <div class="carousel" id="carousel">
-            <!-- JS -->
+        <div class="section-header">
+            <span class="fire">🔥</span>
+            <h2>AS MAIS PEDIDAS</h2>
+        </div>
+        <div class="carousel" id="carousel-mais-pedidas">
+            <div class="carousel-track" id="carousel-track"></div>
         </div>
     </section>
 
-    <!-- BANNERS DE CATEGORIAS -->
-    <section class="banners">
-        <div class="banner" onclick="filtrarCategoria('casal')">
-            <img src="assets/images/banner-casal.webp" alt="Casal">
-            <div class="banner-text">
-                <h3>FANTASIAS PARA CASAL</h3>
-                <button>VER OPÇÕES →</button>
-            </div>
+    <!-- BANNER CASAL -->
+    <div class="category-banner" onclick="alert('Em breve: Fantasias para Casal')">
+        <img src="assets/images/banner-casal.webp" alt="Casal">
+        <div class="overlay-text">
+            <h3>FANTASIAS PARA CASAL ❤️</h3>
+            <button class="btn-pink">VER OPÇÕES →</button>
         </div>
-        <!-- Repita para os outros 3 banners -->
-    </section>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

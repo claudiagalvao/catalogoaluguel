@@ -1,27 +1,26 @@
-
 [
   {
-    "id": "f-aeromoca",
-    "nome": "Aeromoça",
-    "genero": "Feminino",
-    "tamanho": "M",
-    "estilo": "Luxo",
-    "preco": 110,
-    "imagem": "assets/images/aeromoca.jpg",
-    "tags": ["aeromoça", "profissão", "elegante", "balada", "mais-alugadas"],
-    "upsell": ["a-luva-branca", "a-oculos-gatinho-branco", "a-meia-calca-branca"],
-    "destaque": true
+    "id":1,
+    "nome":"Arlequina",
+    "preco":129.9,
+    "imagem":"assets/img/produtos/arlequina.jpg",
+    "tamanho":"M",
+    "genero":"Feminino",
+    "categoria":"festa",
+    "tags":["dc","vilã","anime"],
+    "destaque":true,
+    "acessorios":[1,2]
   },
   {
-    "id": "m-luff",
-    "nome": "Luff",
-    "genero": "Masculino",
-    "tamanho": "P",
-    "estilo": "Impactar",
-    "preco": 250,
-    "imagem": "assets/images/luff.jpg",
-    "tags": ["anime", "cosplay", "onepiece", "grupo", "mais-alugadas"],
-    "upsell": [],
-    "destaque": true
+    "id":2,
+    "nome":"Policial",
+    "preco":99.9,
+    "imagem":"assets/img/produtos/policial.jpg",
+    "tamanho":"G",
+    "genero":"Masculino",
+    "categoria":"casal",
+    "tags":["profissão"],
+    "destaque":true,
+    "acessorios":[3]
   }
 ]

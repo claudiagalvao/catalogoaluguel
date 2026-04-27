@@ -6,7 +6,7 @@
     "imagem": "assets/images/mulher-gato.jpg",
     "tamanhos": ["P", "M", "G"],
     "destaque": true,
-    "categoriaSlug": "impactar"
+    "descricao": "Look sensual e poderoso da Mulher Gato."
   },
   {
     "id": "arlequina",
@@ -15,7 +15,60 @@
     "imagem": "assets/images/arlequina.jpg",
     "tamanhos": ["P", "M", "G"],
     "destaque": true,
-    "categoriaSlug": "divertido"
+    "descricao": "Clássica Arlequina com visual moderno."
+  },
+  {
+    "id": "coringa",
+    "nome": "Coringa",
+    "preco": 129.90,
+    "imagem": "assets/images/coringa.jpg",
+    "tamanhos": ["M", "G", "GG"],
+    "destaque": true,
+    "descricao": "O Príncipe do Crime em toda sua glória."
+  },
+  {
+    "id": "policial",
+    "nome": "Policial Sexy",
+    "preco": 119.90,
+    "imagem": "assets/images/policial.jpg",
+    "tamanhos": ["P", "M", "G"],
+    "destaque": true,
+    "descricao": "Uniforme policial ultra sensual."
+  },
+  {
+    "id": "diabinha",
+    "nome": "Diabinha",
+    "preco": 109.90,
+    "imagem": "assets/images/diabinha.jpg",
+    "tamanhos": ["P", "M"],
+    "destaque": true,
+    "descricao": "Diabinha tentadora e irresistível."
+  },
+  {
+    "id": "rainha-do-mal",
+    "nome": "Rainha do Mal",
+    "preco": 149.90,
+    "imagem": "assets/images/rainha-do-mal.jpg",
+    "tamanhos": ["P", "M", "G"],
+    "destaque": true,
+    "descricao": "Elegância sombria e poderosa."
+  },
+  {
+    "id": "pirata",
+    "nome": "Pirata",
+    "preco": 119.90,
+    "imagem": "assets/images/pirata.jpg",
+    "tamanhos": ["M", "G"],
+    "destaque": true,
+    "descricao": "Pirata sedutora dos mares."
+  },
+  {
+    "id": "astronauta",
+    "nome": "Astronauta",
+    "preco": 129.90,
+    "imagem": "assets/images/astronauta.jpg",
+    "tamanhos": ["P", "M", "G"],
+    "destaque": true,
+    "descricao": "Exploradora do espaço futurista."
   }
-  // ... adicione os demais
 ]

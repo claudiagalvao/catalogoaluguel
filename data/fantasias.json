@@ -1,26 +1,26 @@
 [
   {
-    "id":1,
-    "nome":"Arlequina",
-    "preco":129.9,
-    "imagem":"assets/img/produtos/arlequina.jpg",
-    "tamanho":"M",
-    "genero":"Feminino",
-    "categoria":"festa",
-    "tags":["dc","vilã","anime"],
-    "destaque":true,
-    "acessorios":[1,2]
+    "id": 1,
+    "nome": "Arlequina",
+    "preco": 129.90,
+    "imagem": "arlequina.webp",
+    "categoriaSlug": "casal",
+    "vibe": "impactar",
+    "destaque": true,
+    "tamanhos": ["P", "M", "G"],
+    "tags": ["dc", "filmes", "vilã"],
+    "descricao": "Fantasia completa inspirada na anti-heroína mais icônica da DC."
   },
   {
-    "id":2,
-    "nome":"Policial",
-    "preco":99.9,
-    "imagem":"assets/img/produtos/policial.jpg",
-    "tamanho":"G",
-    "genero":"Masculino",
-    "categoria":"casal",
-    "tags":["profissão"],
-    "destaque":true,
-    "acessorios":[3]
+    "id": 2,
+    "nome": "Coringa",
+    "preco": 129.90,
+    "imagem": "coringa.webp",
+    "categoriaSlug": "casal",
+    "vibe": "impactar",
+    "destaque": true,
+    "tamanhos": ["M", "G", "GG"],
+    "tags": ["vilao", "maquiagem", "filmes"],
+    "descricao": "Terno roxo clássico com colete verde e gravata."
   }
 ]

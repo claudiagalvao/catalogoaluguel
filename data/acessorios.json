@@ -1,21 +1,20 @@
-
 [
   {
-    "id": "a-luva-branca",
-    "nome": "Luva Branca",
-    "preco": 20,
-    "imagem": "assets/images/luva-branca.jpg"
+    "id":1,
+    "nome":"Taco",
+    "preco":39.9,
+    "imagem":"assets/img/acessorios/taco.jpg"
   },
   {
-    "id": "a-oculos-gatinho-branco",
-    "nome": "Óculos Gatinho Branco",
-    "preco": 20,
-    "imagem": "assets/images/oculos-gatinho-branco.jpg"
+    "id":2,
+    "nome":"Peruca",
+    "preco":59.9,
+    "imagem":"assets/img/acessorios/peruca.jpg"
   },
   {
-    "id": "a-meia-calca-branca",
-    "nome": "Meia-calça branca",
-    "preco": 30,
-    "imagem": "assets/images/meia-calca-branca.jpg"
+    "id":3,
+    "nome":"Algema",
+    "preco":29.9,
+    "imagem":"assets/img/acessorios/algema.jpg"
   }
 ]
